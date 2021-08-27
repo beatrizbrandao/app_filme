@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Filmes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark" [fullscreen]="true">
+
+<!-- Searchbar with a placeholder -->
+<ion-searchbar color="cinza" placeholder="Buscar Filmes"></ion-searchbar>
+
+<!-- List of Text Items -->
+<ion-list >
+  
+  <ion-item *ngFor="let filme of listaVideos" routerLink="/esquadrao" color="dark" lines="full" class="ion-no-padding">
+    <ion-thumbnail style="height: 120px; width: 80px;margin-left: 10px; margin-top: 10px; margin-bottom: 10px;" slot="start">
+      <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/wTS3dS2DJiMFFgqKDz5fxMTri.jpg">
+    </ion-thumbnail>
+    <ion-label>
+      <div>
+        <h2 style="font-weight: bold;">O Esquadrão Suicida</h2>
+        <h5>28/07/2021</h5>
+        <ion-badge color="cinza">Ação</ion-badge>
+        <ion-badge color="cinza">Aventura</ion-badge>
+        <ion-badge color="cinza">Comédia</ion-badge>
+      </div>
+    </ion-label>
+
+    <ion-chip outline style="border-radius: 200px; border-bottom-left-radius: 200px; padding-left: 18px;padding-right: 16px; padding-top: 25px; padding-bottom: 25px; border-width: 4px;"color="success">
+      
+      <ion-label>8.0</ion-label>
+    </ion-chip>
+
+    
+  </ion-item>
+
+  <ion-item color="dark" *ngFor="let filme of listaVideos" routerLink="/a-barraca-do-beijo" lines="full" class="ion-no-padding">
+    <ion-thumbnail style="height: 120px; width: 80px;margin-left: 10px; margin-top: 10px; margin-bottom: 10px;" slot="start">
+      <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/rnxc5X7r2KQtkK3ZLuve4Qbvdz.jpg">
+    </ion-thumbnail>
+    <ion-label >
+      <div>
+        <h2 style="font-weight: bold;">A Barraca do Beijo 3</h2>
+        <h5>11/08/2021</h5>
+        <ion-badge color="cinza">Romance</ion-badge>
+        <ion-badge color="cinza">Comédia</ion-badge>
+      </div>
+    </ion-label>
+
+    <ion-chip outline style="border-radius: 200px; border-bottom-left-radius: 200px; padding-left: 18px;padding-right: 16px; padding-top: 25px; padding-bottom: 25px; border-width: 4px;" color="success">
+      <ion-label>77</ion-label>
+    </ion-chip>
+  </ion-item>
+
+  <ion-item *ngFor="let filme of listaVideos" routerLink="/barraca2" color="dark"  lines="full" class="ion-no-padding">
+    <ion-thumbnail style="height: 120px; width: 80px;margin-left: 10px; margin-top: 10px; margin-bottom: 10px;" slot="start">
+      <img src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/oUafkafJiFKkXuzROaAY8N9gGq.jpg">
+    </ion-thumbnail>
+    <ion-label >
+      <div>
+        <h2 style="font-weight: bold;">A Barraca do Beijo 2</h2>
+        <h5>24/07/2020</h5>
+        <ion-badge color="cinza">Romance</ion-badge>
+        <ion-badge color="cinza">Comédia</ion-badge>
+      </div>
+    </ion-label>
+
+    <ion-chip outline style="border-radius: 200px; border-bottom-left-radius: 200px; padding-left: 18px;padding-right: 16px; padding-top: 25px; padding-bottom: 25px; border-width: 4px;" color="success">
+      <ion-label>77</ion-label>
+    </ion-chip>
+  </ion-item>
+
+  <ion-item color="dark"  *ngFor="let filme of listaVideos" [routerLink]="filme.pagina"  lines="full" class="ion-no-padding">
+    <ion-thumbnail style="height: 120px; width: 80px;margin-left: 10px;  margin-top: 10px; margin-bottom: 10px;" slot="start">
+      <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/fnAzaxRSiveFafudJtByxA7I2xT.jpg">
+    </ion-thumbnail>
+    <ion-label >
+      <div>
+        <h2 style="font-weight: bold;">Velozes e Furiosos 9</h2>
+        <h5>19/05/2021</h5>
+        <ion-badge color="cinza">Ação</ion-badge>
+        <ion-badge color="cinza">Crime</ion-badge>
+      </div>
+    </ion-label>
+
+    <ion-chip outline style="border-radius: 200px; border-bottom-left-radius: 200px; padding-left: 18px;padding-right: 16px; padding-top: 25px; padding-bottom: 25px; border-width: 4px;" color="success">
+      <ion-label>7.6</ion-label>
+    </ion-chip>
+  </ion-item>
+
+  <ion-item *ngFor="let filme of listaVideos" routerLink="/homem-aranha" color="dark"  lines="full" class="ion-no-padding">
+    <ion-thumbnail style="height: 120px; width: 80px;margin-left: 10px;  margin-top: 10px; margin-bottom: 10px;" slot="start">
+      <img src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/9Fgs1ewIZiBBTto1XDHeBN0D8ug.jpg">
+    </ion-thumbnail>
+    <ion-label >
+      <div>
+        <h2 style="font-weight: bold;">Homem Aranha - De Volta ao Lar</h2>
+        <h5>05/07/2017</h5>
+        <ion-badge color="cinza">Ação</ion-badge>
+        <ion-badge color="cinza">Aventura</ion-badge>
+      </div>
+    </ion-label>
+
+    <ion-chip outline style="border-radius: 200px; border-bottom-left-radius: 200px; padding-left: 18px;padding-right: 16px; padding-top: 25px; padding-bottom: 25px; border-width: 4px;" color="success">
+      <ion-label>7.4</ion-label>
+    </ion-chip>
+  </ion-item>
+
+  <ion-item *ngFor="let filme of listaVideos" routerLink="/velozes8" color="dark"  lines="full" class="ion-no-padding">
+    <ion-thumbnail style="height: 120px; width: 80px;margin-left: 10px; margin-top: 10px; margin-bottom: 10px;" slot="start">
+      <img src="https://www.themoviedb.org/t/p/w94_and_h141_bestv2/38RVo4cX1O7Ia6k9WXcxkxprHm.jpg">
+    </ion-thumbnail>
+    <ion-label >
+      <div>
+        <h2 style="font-weight: bold;">Velozes e Furiosos 8</h2>
+        <h5>16/04/2017</h5>
+        <ion-badge color="cinza">Ação</ion-badge>
+        <ion-badge color="cinza">Crime</ion-badge>
+        <ion-badge color="cinza">Thriller</ion-badge>
+      </div>
+    </ion-label>
+
+    <ion-chip outline style="border-radius: 200px; border-bottom-left-radius: 200px; padding-left: 18px; padding-right: 16px; padding-top: 25px; padding-bottom: 25px; border-width: 4px;" color="success">
+      <ion-label>6.9</ion-label>
+    </ion-chip>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>
